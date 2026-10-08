@@ -1,0 +1,125 @@
+# AI-Powered Fake Job and Recruitment Scam Detection System
+# Global Configuration & Hyperparameters
+
+project:
+  name: "fake-job-detection"
+  version: "0.3.0"
+  random_seed: 42
+
+paths:
+  raw_data_dir: "data/raw"
+  processed_data_dir: "data/processed"
+  external_data_dir: "data/external"
+  models_dir: "models"
+  reports_dir: "reports"
+  figures_dir: "reports/figures"
+  raw_dataset_filename: "fake_job_postings.csv"
+  heuristic_keywords_file: "config/heuristic_keywords.yaml"
+
+data:
+  target_column: "fraudulent"
+  id_column: "job_id"
+  text_columns:
+    - "title"
+    - "company_profile"
+    - "description"
+    - "requirements"
+    - "benefits"
+  categorical_columns:
+    - "employment_type"
+    - "required_experience"
+    - "required_education"
+    - "industry"
+    - "function"
+  binary_columns:
+    - "telecommuting"
+    - "has_company_logo"
+    - "has_questions"
+  split:
+    test_size: 0.20
+    stratify: true
+    random_state: 42
+
+preprocessing:
+  text:
+    normalize_unicode: true
+    strip_html: true
+    unescape_html: true
+    normalize_whitespace: true
+    lowercase: true
+    missing_text_token: ""
+    field_separator: "\n"
+  missing_values:
+    categorical_fill: "__MISSING__"
+    binary_fill: 0
+  features:
+    engineer_salary_flag: true
+    engineer_company_profile_flag: true
+    engineer_text_lengths: true
+    engineer_word_counts: true
+  tfidf:
+    max_features: 10000
+    ngram_range: [1, 2]
+    min_df: 3
+    max_df: 0.95
+    sublinear_tf: true
+    norm: "l2"
+    strip_accents: "unicode"
+  categorical_encoding:
+    handle_unknown: "ignore"
+    sparse_output: true
+
+features:
+  groups:
+    - "TEXT_TFIDF"
+    - "TEXT_STATISTICS"
+    - "METADATA_BINARY"
+    - "METADATA_CATEGORICAL"
+    - "MISSINGNESS"
+    - "SALARY"
+    - "CONTACT"
+    - "HEURISTIC"
+  text_statistics:
+    compute_char_counts: true
+    compute_word_counts: true
+    compute_avg_word_length: true
+    compute_case_digit_stats: true
+    compute_punctuation_stats: true
+    compute_section_ratios: true
+  salary:
+    parse_numeric_bounds: true
+    max_reasonable_salary: 10000000
+  contact:
+    extract_emails: true
+    extract_urls: true
+    extract_phones: true
+    extract_free_domains: true
+  heuristic:
+    config_path: "config/heuristic_keywords.yaml"
+    compute_counts: true
+    compute_presence: true
+    compute_frequency: true
+
+representations:
+  representation_a:
+    name: "TF-IDF + Tabular Metadata"
+    status: "IMPLEMENTED"
+    components: ["TEXT_TFIDF", "METADATA_CATEGORICAL", "METADATA_BINARY", "TEXT_STATISTICS", "MISSINGNESS", "SALARY", "CONTACT", "HEURISTIC"]
+  representation_b:
+    name: "Word Embeddings (Word2Vec / FastText / GloVe) + Tabular Metadata"
+    status: "PLANNED"
+  representation_c:
+    name: "Pretrained Transformer Embeddings + Tabular Metadata"
+    status: "PLANNED"
+  representation_d:
+    name: "Tokenized Text Sequence for Transformer Fine-Tuning"
+    status: "PLANNED"
+
+sampling:
+  method: "none" # SMOTE is disabled in Phase 3
+  apply_to_training_only: true
+
+logging:
+  level: "INFO"
+  log_to_file: true
+  log_file_path: "logs/app.log"

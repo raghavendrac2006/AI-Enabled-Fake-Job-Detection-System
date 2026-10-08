@@ -1,0 +1,118 @@
+# Configurable Heuristic Scam & Suspicious Language Keywords
+# Used by src/features/heuristic_features.py
+# Reference: Recruitment Scam Pattern Analysis & Academic Literature
+
+categories:
+  payment_requests:
+    description: "Language soliciting money transfers, processing fees, or non-standard payment methods."
+    keywords:
+      - "wire transfer"
+      - "western union"
+      - "moneygram"
+      - "cashier check"
+      - "money order"
+      - "processing fee"
+      - "upfront fee"
+      - "starter kit fee"
+      - "registration fee"
+      - "reimbursement check"
+      - "pay via"
+      - "send payment"
+
+  urgency:
+    description: "Urgency-inducing phrasing designed to bypass candidate scrutiny."
+    keywords:
+      - "urgent"
+      - "immediate start"
+      - "urgently required"
+      - "act now"
+      - "apply immediately"
+      - "limited positions"
+      - "limited openings"
+      - "immediate hiring"
+      - "start today"
+      - "instant hire"
+      - "rush"
+
+  guaranteed_income:
+    description: "Unrealistic earning guarantees, get-rich-quick pitches, and vague financial claims."
+    keywords:
+      - "guaranteed income"
+      - "earn fast"
+      - "make money fast"
+      - "unlimited earning"
+      - "guaranteed salary"
+      - "earn up to"
+      - "financial freedom"
+      - "passive income"
+      - "quick cash"
+      - "high payout"
+      - "earn money quickly"
+
+  work_from_home_claims:
+    description: "Overemphasized remote work perks with minimal skill/experience requirements."
+    keywords:
+      - "work from home"
+      - "work from anywhere"
+      - "be your own boss"
+      - "no experience required"
+      - "no experience needed"
+      - "no skills needed"
+      - "flexible work hours"
+      - "earn from home"
+      - "part-time or full-time work from home"
+
+  personal_info_requests:
+    description: "Early solicitation of sensitive personal or financial identification."
+    keywords:
+      - "bank details"
+      - "bank account"
+      - "social security number"
+      - "ssn"
+      - "credit card"
+      - "debit card"
+      - "routing number"
+      - "passport copy"
+      - "date of birth"
+      - "id verification"
+      - "scan of your id"
+
+  external_comms:
+    description: "Attempts to divert communication off-platform to unmonitored channels."
+    keywords:
+      - "telegram"
+      - "whatsapp"
+      - "skype interview"
+      - "google hangout"
+      - "google hangouts"
+      - "wire app"
+      - "contact via email"
+      - "text me directly"
+      - "reach me on"
+
+  cryptocurrency:
+    description: "Cryptocurrency, token, or decentralized asset transaction keywords."
+    keywords:
+      - "bitcoin"
+      - "btc"
+      - "ethereum"
+      - "eth"
+      - "crypto"
+      - "cryptocurrency"
+      - "usdt"
+      - "wallet address"
+      - "binance"
+      - "coinbase"
+      - "blockchain payout"
+
+  recruitment_fees:
+    description: "Demands for candidates to purchase equipment, training materials, or certifications."
+    keywords:
+      - "training fee"
+      - "application fee"
+      - "visa fee"
+      - "background check fee"
+      - "equipment fee"
+      - "software purchase"
+      - "onboarding deposit"
+      - "candidate deposit"

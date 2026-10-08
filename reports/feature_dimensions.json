@@ -1,0 +1,132 @@
+{
+  "TEXT_TFIDF": {
+    "num_features": 10000,
+    "train_shape": [
+      14304,
+      10000
+    ],
+    "test_shape": [
+      3576,
+      10000
+    ],
+    "is_sparse": true,
+    "sparsity_percent": 96.95
+  },
+  "TEXT_STATISTICS": {
+    "num_features": 44,
+    "train_shape": [
+      14304,
+      44
+    ],
+    "test_shape": [
+      3576,
+      44
+    ],
+    "is_sparse": false,
+    "sparsity_percent": 31.6
+  },
+  "METADATA_BINARY": {
+    "num_features": 3,
+    "train_shape": [
+      14304,
+      3
+    ],
+    "test_shape": [
+      3576,
+      3
+    ],
+    "is_sparse": false,
+    "sparsity_percent": 55.75
+  },
+  "METADATA_CATEGORICAL": {
+    "num_features": 285,
+    "train_shape": [
+      14304,
+      285
+    ],
+    "test_shape": [
+      3576,
+      285
+    ],
+    "is_sparse": true,
+    "sparsity_percent": 97.89
+  },
+  "MISSINGNESS": {
+    "num_features": 5,
+    "train_shape": [
+      14304,
+      5
+    ],
+    "test_shape": [
+      3576,
+      5
+    ],
+    "is_sparse": false,
+    "sparsity_percent": 28.21
+  },
+  "SALARY": {
+    "num_features": 6,
+    "train_shape": [
+      14304,
+      6
+    ],
+    "test_shape": [
+      3576,
+      6
+    ],
+    "is_sparse": false,
+    "sparsity_percent": 89.8
+  },
+  "CONTACT": {
+    "num_features": 8,
+    "train_shape": [
+      14304,
+      8
+    ],
+    "test_shape": [
+      3576,
+      8
+    ],
+    "is_sparse": false,
+    "sparsity_percent": 99.94
+  },
+  "HEURISTIC": {
+    "num_features": 27,
+    "train_shape": [
+      14304,
+      27
+    ],
+    "test_shape": [
+      3576,
+      27
+    ],
+    "is_sparse": false,
+    "sparsity_percent": 98.47
+  },
+  "ALL_TABULAR": {
+    "num_features": 378,
+    "train_shape": [
+      14304,
+      378
+    ],
+    "test_shape": [
+      3576,
+      378
+    ],
+    "is_sparse": true,
+    "sparsity_percent": 88.88
+  },
+  "HYBRID_ALL": {
+    "num_features": 10378,
+    "train_shape": [
+      14304,
+      10378
+    ],
+    "test_shape": [
+      3576,
+      10378
+    ],
+    "is_sparse": true,
+    "sparsity_percent": 96.65
+  }
+}

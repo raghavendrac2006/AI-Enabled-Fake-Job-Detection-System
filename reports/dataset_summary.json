@@ -1,0 +1,710 @@
+{
+  "dataset_metadata": {
+    "filename": "fake_job_postings.csv",
+    "absolute_path": "A:\\AI-Powered Job Detection System\\data\\raw\\fake_job_postings.csv",
+    "size_bytes": 50061601,
+    "size_mb": 47.74,
+    "sha256": "59253295129d8b6a27607f9904f7d4ddf4dbb0ee35e079c7eb51b58b5e62bf60",
+    "extension": ".csv",
+    "encoding_used": "utf-8"
+  },
+  "schema": {
+    "actual_column_count": 18,
+    "actual_columns": [
+      "job_id",
+      "title",
+      "location",
+      "department",
+      "salary_range",
+      "company_profile",
+      "description",
+      "requirements",
+      "benefits",
+      "telecommuting",
+      "has_company_logo",
+      "has_questions",
+      "employment_type",
+      "required_experience",
+      "required_education",
+      "industry",
+      "function",
+      "fraudulent"
+    ],
+    "matching_columns_count": 18,
+    "missing_expected_columns": [],
+    "extra_columns": [],
+    "is_emscad_schema_match": true
+  },
+  "basic_statistics": {
+    "total_rows": 17880,
+    "total_columns": 18,
+    "memory_usage_mb": 81.14
+  },
+  "target_analysis": {
+    "target_column": "fraudulent",
+    "unique_classes": [
+      0,
+      1
+    ],
+    "legitimate_count (0)": 17014,
+    "fraudulent_count (1)": 866,
+    "null_count": 0,
+    "legitimate_percentage": 95.1566,
+    "fraudulent_percentage": 4.8434,
+    "imbalance_ratio_legit_to_fraud": "19.65:1",
+    "imbalance_multiplier": 19.65
+  },
+  "duplicates": {
+    "exact_duplicate_rows": 0,
+    "exact_duplicate_percentage": 0.0,
+    "duplicate_job_ids": 0,
+    "duplicate_titles": 6649,
+    "duplicate_descriptions": 3078,
+    "duplicate_company_profiles": 12863
+  },
+  "missing_values_summary": {
+    "heavily_missing_columns": [
+      "salary_range",
+      "department"
+    ],
+    "complete_columns": [
+      "job_id",
+      "title",
+      "telecommuting",
+      "has_company_logo",
+      "has_questions",
+      "fraudulent"
+    ],
+    "columns": [
+      {
+        "column": "salary_range",
+        "missing_count": 15012,
+        "non_missing_count": 2868,
+        "missing_percentage": 83.96,
+        "is_heavily_missing (>50%)": true,
+        "is_complete (0% missing)": false
+      },
+      {
+        "column": "department",
+        "missing_count": 11547,
+        "non_missing_count": 6333,
+        "missing_percentage": 64.58,
+        "is_heavily_missing (>50%)": true,
+        "is_complete (0% missing)": false
+      },
+      {
+        "column": "required_education",
+        "missing_count": 8105,
+        "non_missing_count": 9775,
+        "missing_percentage": 45.33,
+        "is_heavily_missing (>50%)": false,
+        "is_complete (0% missing)": false
+      },
+      {
+        "column": "benefits",
+        "missing_count": 7212,
+        "non_missing_count": 10668,
+        "missing_percentage": 40.34,
+        "is_heavily_missing (>50%)": false,
+        "is_complete (0% missing)": false
+      },
+      {
+        "column": "required_experience",
+        "missing_count": 7050,
+        "non_missing_count": 10830,
+        "missing_percentage": 39.43,
+        "is_heavily_missing (>50%)": false,
+        "is_complete (0% missing)": false
+      },
+      {
+        "column": "function",
+        "missing_count": 6455,
+        "non_missing_count": 11425,
+        "missing_percentage": 36.1,
+        "is_heavily_missing (>50%)": false,
+        "is_complete (0% missing)": false
+      },
+      {
+        "column": "industry",
+        "missing_count": 4903,
+        "non_missing_count": 12977,
+        "missing_percentage": 27.42,
+        "is_heavily_missing (>50%)": false,
+        "is_complete (0% missing)": false
+      },
+      {
+        "column": "employment_type",
+        "missing_count": 3471,
+        "non_missing_count": 14409,
+        "missing_percentage": 19.41,
+        "is_heavily_missing (>50%)": false,
+        "is_complete (0% missing)": false
+      },
+      {
+        "column": "company_profile",
+        "missing_count": 3308,
+        "non_missing_count": 14572,
+        "missing_percentage": 18.5,
+        "is_heavily_missing (>50%)": false,
+        "is_complete (0% missing)": false
+      },
+      {
+        "column": "requirements",
+        "missing_count": 2696,
+        "non_missing_count": 15184,
+        "missing_percentage": 15.08,
+        "is_heavily_missing (>50%)": false,
+        "is_complete (0% missing)": false
+      },
+      {
+        "column": "location",
+        "missing_count": 346,
+        "non_missing_count": 17534,
+        "missing_percentage": 1.94,
+        "is_heavily_missing (>50%)": false,
+        "is_complete (0% missing)": false
+      },
+      {
+        "column": "description",
+        "missing_count": 1,
+        "non_missing_count": 17879,
+        "missing_percentage": 0.01,
+        "is_heavily_missing (>50%)": false,
+        "is_complete (0% missing)": false
+      },
+      {
+        "column": "job_id",
+        "missing_count": 0,
+        "non_missing_count": 17880,
+        "missing_percentage": 0.0,
+        "is_heavily_missing (>50%)": false,
+        "is_complete (0% missing)": true
+      },
+      {
+        "column": "title",
+        "missing_count": 0,
+        "non_missing_count": 17880,
+        "missing_percentage": 0.0,
+        "is_heavily_missing (>50%)": false,
+        "is_complete (0% missing)": true
+      },
+      {
+        "column": "telecommuting",
+        "missing_count": 0,
+        "non_missing_count": 17880,
+        "missing_percentage": 0.0,
+        "is_heavily_missing (>50%)": false,
+        "is_complete (0% missing)": true
+      },
+      {
+        "column": "has_company_logo",
+        "missing_count": 0,
+        "non_missing_count": 17880,
+        "missing_percentage": 0.0,
+        "is_heavily_missing (>50%)": false,
+        "is_complete (0% missing)": true
+      },
+      {
+        "column": "has_questions",
+        "missing_count": 0,
+        "non_missing_count": 17880,
+        "missing_percentage": 0.0,
+        "is_heavily_missing (>50%)": false,
+        "is_complete (0% missing)": true
+      },
+      {
+        "column": "fraudulent",
+        "missing_count": 0,
+        "non_missing_count": 17880,
+        "missing_percentage": 0.0,
+        "is_heavily_missing (>50%)": false,
+        "is_complete (0% missing)": true
+      }
+    ]
+  },
+  "text_statistics": {
+    "title": {
+      "overall": {
+        "missing_count": 0,
+        "empty_string_count": 0,
+        "populated_count": 17880,
+        "populated_pct": 100.0,
+        "char_length": {
+          "min": 3,
+          "max": 142,
+          "mean": 28.53,
+          "median": 25.0,
+          "std": 13.87
+        },
+        "word_count": {
+          "min": 1,
+          "max": 19,
+          "mean": 3.76,
+          "median": 3.0,
+          "std": 2.07
+        }
+      },
+      "class_stratified": {
+        "legitimate": {
+          "count": 17014,
+          "empty_or_missing_count": 0,
+          "populated_pct": 100.0,
+          "char_length": {
+            "min": 3,
+            "max": 110,
+            "mean": 28.42,
+            "median": 25.0
+          },
+          "word_count": {
+            "min": 1,
+            "max": 19,
+            "mean": 3.75,
+            "median": 3.0
+          }
+        },
+        "fraudulent": {
+          "count": 866,
+          "empty_or_missing_count": 0,
+          "populated_pct": 100.0,
+          "char_length": {
+            "min": 3,
+            "max": 142,
+            "mean": 30.67,
+            "median": 28.0
+          },
+          "word_count": {
+            "min": 1,
+            "max": 15,
+            "mean": 4.02,
+            "median": 3.0
+          }
+        }
+      }
+    },
+    "company_profile": {
+      "overall": {
+        "missing_count": 3308,
+        "empty_string_count": 3308,
+        "populated_count": 14572,
+        "populated_pct": 81.5,
+        "char_length": {
+          "min": 0,
+          "max": 6178,
+          "mean": 620.9,
+          "median": 570.0,
+          "std": 567.45
+        },
+        "word_count": {
+          "min": 0,
+          "max": 885,
+          "mean": 92.55,
+          "median": 83.0,
+          "std": 85.49
+        }
+      },
+      "class_stratified": {
+        "legitimate": {
+          "count": 17014,
+          "empty_or_missing_count": 2721,
+          "populated_pct": 84.01,
+          "char_length": {
+            "min": 0,
+            "max": 6178,
+            "mean": 640.75,
+            "median": 588.0
+          },
+          "word_count": {
+            "min": 0,
+            "max": 885,
+            "mean": 95.65,
+            "median": 86.0
+          }
+        },
+        "fraudulent": {
+          "count": 866,
+          "empty_or_missing_count": 587,
+          "populated_pct": 32.22,
+          "char_length": {
+            "min": 0,
+            "max": 1422,
+            "mean": 230.89,
+            "median": 0.0
+          },
+          "word_count": {
+            "min": 0,
+            "max": 220,
+            "mean": 31.71,
+            "median": 0.0
+          }
+        }
+      }
+    },
+    "description": {
+      "overall": {
+        "missing_count": 1,
+        "empty_string_count": 2,
+        "populated_count": 17878,
+        "populated_pct": 99.99,
+        "char_length": {
+          "min": 0,
+          "max": 14907,
+          "mean": 1218.0,
+          "median": 1017.0,
+          "std": 894.83
+        },
+        "word_count": {
+          "min": 0,
+          "max": 2115,
+          "mean": 170.45,
+          "median": 146.0,
+          "std": 123.3
+        }
+      },
+      "class_stratified": {
+        "legitimate": {
+          "count": 17014,
+          "empty_or_missing_count": 0,
+          "populated_pct": 100.0,
+          "char_length": {
+            "min": 6,
+            "max": 14907,
+            "mean": 1221.22,
+            "median": 1027.0
+          },
+          "word_count": {
+            "min": 1,
+            "max": 2115,
+            "mean": 171.04,
+            "median": 147.0
+          }
+        },
+        "fraudulent": {
+          "count": 866,
+          "empty_or_missing_count": 2,
+          "populated_pct": 99.77,
+          "char_length": {
+            "min": 0,
+            "max": 8578,
+            "mean": 1154.83,
+            "median": 844.5
+          },
+          "word_count": {
+            "min": 0,
+            "max": 1183,
+            "mean": 158.75,
+            "median": 113.5
+          }
+        }
+      }
+    },
+    "requirements": {
+      "overall": {
+        "missing_count": 2696,
+        "empty_string_count": 2698,
+        "populated_count": 15182,
+        "populated_pct": 84.91,
+        "char_length": {
+          "min": 0,
+          "max": 10864,
+          "mean": 590.13,
+          "median": 467.0,
+          "std": 613.19
+        },
+        "word_count": {
+          "min": 0,
+          "max": 1645,
+          "mean": 78.03,
+          "median": 62.0,
+          "std": 81.65
+        }
+      },
+      "class_stratified": {
+        "legitimate": {
+          "count": 17014,
+          "empty_or_missing_count": 2544,
+          "populated_pct": 85.05,
+          "char_length": {
+            "min": 0,
+            "max": 10864,
+            "mean": 597.47,
+            "median": 476.5
+          },
+          "word_count": {
+            "min": 0,
+            "max": 1645,
+            "mean": 79.03,
+            "median": 63.0
+          }
+        },
+        "fraudulent": {
+          "count": 866,
+          "empty_or_missing_count": 154,
+          "populated_pct": 82.22,
+          "char_length": {
+            "min": 0,
+            "max": 4077,
+            "mean": 446.05,
+            "median": 249.0
+          },
+          "word_count": {
+            "min": 0,
+            "max": 471,
+            "mean": 58.41,
+            "median": 34.0
+          }
+        }
+      }
+    },
+    "benefits": {
+      "overall": {
+        "missing_count": 7212,
+        "empty_string_count": 7220,
+        "populated_count": 10660,
+        "populated_pct": 59.62,
+        "char_length": {
+          "min": 0,
+          "max": 4429,
+          "mean": 208.9,
+          "median": 45.0,
+          "std": 337.08
+        },
+        "word_count": {
+          "min": 0,
+          "max": 694,
+          "mean": 29.99,
+          "median": 6.0,
+          "std": 49.76
+        }
+      },
+      "class_stratified": {
+        "legitimate": {
+          "count": 17014,
+          "empty_or_missing_count": 6856,
+          "populated_pct": 59.7,
+          "char_length": {
+            "min": 0,
+            "max": 4429,
+            "mean": 208.73,
+            "median": 47.0
+          },
+          "word_count": {
+            "min": 0,
+            "max": 694,
+            "mean": 30.02,
+            "median": 6.0
+          }
+        },
+        "fraudulent": {
+          "count": 866,
+          "empty_or_missing_count": 364,
+          "populated_pct": 57.97,
+          "char_length": {
+            "min": 0,
+            "max": 2500,
+            "mean": 212.2,
+            "median": 36.0
+          },
+          "word_count": {
+            "min": 0,
+            "max": 381,
+            "mean": 29.45,
+            "median": 5.0
+          }
+        }
+      }
+    },
+    "composite_job_text": {
+      "overall": {
+        "missing_count": 0,
+        "empty_string_count": 0,
+        "populated_count": 17880,
+        "populated_pct": 100.0,
+        "char_length": {
+          "min": 18,
+          "max": 14945,
+          "mean": 2670.46,
+          "median": 2522.0,
+          "std": 1465.51
+        },
+        "word_count": {
+          "min": 2,
+          "max": 2118,
+          "mean": 374.79,
+          "median": 349.0,
+          "std": 207.62
+        }
+      },
+      "class_stratified": {
+        "legitimate": {
+          "count": 17014,
+          "empty_or_missing_count": 0,
+          "populated_pct": 100.0,
+          "char_length": {
+            "min": 83,
+            "max": 14945,
+            "mean": 2700.59,
+            "median": 2560.5
+          },
+          "word_count": {
+            "min": 7,
+            "max": 2118,
+            "mean": 379.49,
+            "median": 355.0
+          }
+        },
+        "fraudulent": {
+          "count": 866,
+          "empty_or_missing_count": 0,
+          "populated_pct": 100.0,
+          "char_length": {
+            "min": 18,
+            "max": 9752,
+            "mean": 2078.64,
+            "median": 1656.5
+          },
+          "word_count": {
+            "min": 2,
+            "max": 1338,
+            "mean": 282.33,
+            "median": 224.5
+          }
+        }
+      }
+    }
+  },
+  "leakage_review": [
+    {
+      "column": "job_id",
+      "potential_leakage": "YES (Database Key Leakage Risk)",
+      "risk_level": "HIGH",
+      "reason": "Sequential integer ID. If fraudulent postings were scraped in batches or added consecutively, models might memorize ID ranges instead of genuine textual/domain signals.",
+      "recommended_action": "Drop 'job_id' completely from ML feature vectors."
+    },
+    {
+      "column": "title",
+      "potential_leakage": "NO (Core Unstructured Feature)",
+      "risk_level": "NONE",
+      "reason": "Realistic text available during job posting submission.",
+      "recommended_action": "Retain for NLP feature extraction, TF-IDF, and Transformer fine-tuning."
+    },
+    {
+      "column": "location",
+      "potential_leakage": "NO (Categorical Metadata)",
+      "risk_level": "NONE",
+      "reason": "Standard structured form fields completed by the job poster.",
+      "recommended_action": "Handle missing values with 'Missing' category; apply frequency/one-hot encoding without target leakage."
+    },
+    {
+      "column": "department",
+      "potential_leakage": "NO (Categorical Metadata)",
+      "risk_level": "NONE",
+      "reason": "Standard structured form fields completed by the job poster.",
+      "recommended_action": "Handle missing values with 'Missing' category; apply frequency/one-hot encoding without target leakage."
+    },
+    {
+      "column": "salary_range",
+      "potential_leakage": "LOW (High Missingness / Heuristic Proxy)",
+      "risk_level": "LOW",
+      "reason": "Approximately 83% missing values. Real-world postings legitimately omit salary, but scammers often omit or place unrealistic ranges.",
+      "recommended_action": "Extract binary flag 'has_salary_specified' and parse numeric boundaries; impute missing with a dedicated indicator token."
+    },
+    {
+      "column": "company_profile",
+      "potential_leakage": "NO (Core Unstructured Feature)",
+      "risk_level": "NONE",
+      "reason": "Realistic text available during job posting submission.",
+      "recommended_action": "Retain for NLP feature extraction, TF-IDF, and Transformer fine-tuning."
+    },
+    {
+      "column": "description",
+      "potential_leakage": "NO (Core Unstructured Feature)",
+      "risk_level": "NONE",
+      "reason": "Realistic text available during job posting submission.",
+      "recommended_action": "Retain for NLP feature extraction, TF-IDF, and Transformer fine-tuning."
+    },
+    {
+      "column": "requirements",
+      "potential_leakage": "NO (Core Unstructured Feature)",
+      "risk_level": "NONE",
+      "reason": "Realistic text available during job posting submission.",
+      "recommended_action": "Retain for NLP feature extraction, TF-IDF, and Transformer fine-tuning."
+    },
+    {
+      "column": "benefits",
+      "potential_leakage": "NO (Core Unstructured Feature)",
+      "risk_level": "NONE",
+      "reason": "Realistic text available during job posting submission.",
+      "recommended_action": "Retain for NLP feature extraction, TF-IDF, and Transformer fine-tuning."
+    },
+    {
+      "column": "telecommuting",
+      "potential_leakage": "NO (Valid Metadata Signal)",
+      "risk_level": "NONE",
+      "reason": "Binary platform flags visible at posting creation time.",
+      "recommended_action": "Retain as tabular binary features."
+    },
+    {
+      "column": "has_company_logo",
+      "potential_leakage": "NO (Valid Metadata Signal)",
+      "risk_level": "NONE",
+      "reason": "Binary platform flags visible at posting creation time.",
+      "recommended_action": "Retain as tabular binary features."
+    },
+    {
+      "column": "has_questions",
+      "potential_leakage": "NO (Valid Metadata Signal)",
+      "risk_level": "NONE",
+      "reason": "Binary platform flags visible at posting creation time.",
+      "recommended_action": "Retain as tabular binary features."
+    },
+    {
+      "column": "employment_type",
+      "potential_leakage": "NO (Categorical Metadata)",
+      "risk_level": "NONE",
+      "reason": "Standard structured form fields completed by the job poster.",
+      "recommended_action": "Handle missing values with 'Missing' category; apply frequency/one-hot encoding without target leakage."
+    },
+    {
+      "column": "required_experience",
+      "potential_leakage": "NO (Categorical Metadata)",
+      "risk_level": "NONE",
+      "reason": "Standard structured form fields completed by the job poster.",
+      "recommended_action": "Handle missing values with 'Missing' category; apply frequency/one-hot encoding without target leakage."
+    },
+    {
+      "column": "required_education",
+      "potential_leakage": "NO (Categorical Metadata)",
+      "risk_level": "NONE",
+      "reason": "Standard structured form fields completed by the job poster.",
+      "recommended_action": "Handle missing values with 'Missing' category; apply frequency/one-hot encoding without target leakage."
+    },
+    {
+      "column": "industry",
+      "potential_leakage": "NO (Categorical Metadata)",
+      "risk_level": "NONE",
+      "reason": "Standard structured form fields completed by the job poster.",
+      "recommended_action": "Handle missing values with 'Missing' category; apply frequency/one-hot encoding without target leakage."
+    },
+    {
+      "column": "function",
+      "potential_leakage": "NO (Categorical Metadata)",
+      "risk_level": "NONE",
+      "reason": "Standard structured form fields completed by the job poster.",
+      "recommended_action": "Handle missing values with 'Missing' category; apply frequency/one-hot encoding without target leakage."
+    },
+    {
+      "column": "fraudulent",
+      "potential_leakage": "YES (Ground Truth Target)",
+      "risk_level": "CRITICAL",
+      "reason": "This is the primary prediction target.",
+      "recommended_action": "Isolate as target label 'y'. Never include in feature matrix 'X'."
+    }
+  ],
+  "generated_figures": [
+    "A:\\AI-Powered Job Detection System\\reports\\figures\\01_class_imbalance_distribution.png",
+    "A:\\AI-Powered Job Detection System\\reports\\figures\\02_missing_values_distribution.png",
+    "A:\\AI-Powered Job Detection System\\reports\\figures\\03_text_length_distribution.png",
+    "A:\\AI-Powered Job Detection System\\reports\\figures\\04_binary_indicator_fraud_rates.png",
+    "A:\\AI-Powered Job Detection System\\reports\\figures\\05_top_fraudulent_industries_functions.png"
+  ]
+}
